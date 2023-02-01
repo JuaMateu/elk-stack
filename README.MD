@@ -1,12 +1,8 @@
 # Proyecto de instalaccion de stack ELK y servidor WordPress
 
 Este proyecto se realizó en una infraestructura virtual montada con VirtualBox.     
-
 El sistema operativo utilizado es Ubuntu  
 
-## Paso 1: Montar maquinas virtuales con VBox
-
-Generamos 2 maquinas virtuales conectadas a una red NAT de forma que puedan comunicarse entre si, a la misma se le dio un rango 192.168.2.0/24
       
 ### infra y networking:
 Para el proyecto usamos 2 servidores con las siguientes ip estaticas (  [__paso a paso en este link__](./src/staticip.md) ) 
@@ -21,6 +17,10 @@ Para poder acceder vía SSH a estos servers desde el Host configuramos port forw
 ## A - Diagrama de la infraestructura implementada
 
 ![Infraestructura](./src/2-DiagramaInfra.jpg)  
+
+## Montar maquinas virtuales con VBox
+
+Generamos 2 maquinas virtuales conectadas a una red NAT de forma que puedan comunicarse entre si, a la misma se le dio un rango 192.168.2.0/24
 
 ## Paso 1 
 ## instalacion y configuracion del servidor Wordpress 
