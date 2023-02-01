@@ -22,13 +22,19 @@ Para poder acceder vía SSH a estos servers desde el Host configuramos port forw
 
 ![Infraestructura](./src/2-DiagramaInfra.jpg)  
 
-## Paso 1 instalacion y configuracion del servidor Wordpress 
+## Paso 1 
+## instalacion y configuracion del servidor Wordpress 
 
 Ver [Documentacion para la instalacion y configuracion del Servidor Wordpress](./src/3-instalacionWP.md)
 
 los pasos a seguir serán automatizados en un script de instalación y configuracion del servidor
 
 # INSTALACION ELK
+
+Ver [Documentacion para la instalacion y configuracion del Servidor con stack ELK](./src/3-instalacionWP.md)
+
+los pasos a seguir serán automatizados en un script de instalación y configuracion del servidor
+
 
 #!/bin/bash
 
