@@ -101,10 +101,13 @@ Reiniciar y habilitar servicio de nginx
 
 ### G. Descargar y configurar WordPress
 
+Nos ubicamos en la carpeta /var/www/html/, descargamos wordpress y luego lo descomprimimos
+
     sudo cd /var/www/html/
     sudo wget https://wordpress.org/latest.tar.gz
     sudo tar xzfv latest.tar.gz 1>/dev/null
-a
+
+nos ubicamos en la carpeta donde se encuentran los contenidos web 
 
     cd /var/www/html/wordpress/public_html
 a
@@ -148,6 +151,4 @@ instalacion de wordpress
     sudo filebeat modules enable nginx
     sudo filebeat modules enable mysql
 
-    wget -qO -https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add
-    echo deb https://artifacts.elastic.co/packages/7.x/apt stable main | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
-    sudo apt-get update && sudo apt-get install -y filebeat
+
