@@ -37,8 +37,31 @@ Ver [Documentacion para la instalacion y configuracion del Servidor con stack EL
 los pasos a seguir serán automatizados en un script de instalación y configuracion del servidor
 
 
-- Script para la automatización de la instalación, aplicando de los conceptos
-explicados en la teoría, como independencia de filesystems para la ubicación de los datos de Elasticsearch o la BBDD, uso de LVM, uso del gestor de paquetes.
-- Evidencias de la obtención de eventos registrados en los logs de la aplicación en Kibana
-- Análisis de rendimiento de los servidores con herramientas de CLI y/o Vector. ¿Alguno necesita más recursos o está sobredimensionado?
-- Propuestas para mejorar la escalabilidad y disponibilidad (HA)
+# Utilizar script para la instalacion automatizada
+
+Para utilizar los scripts para la instalacion automatizada de los proyectos se deben seguir los siguientes pasos:
+1. clonar el repositorio
+2. ejecutar los script con permisos de root
+3. para la instalacion del servidor wordpress ejecutar el comando ./Wordpress.sh
+4. para la instalacion del servidor ELK ejecutar el comando ./ELK.sh
+5. se debe terminar la configuracion de wordpress y kibana a traves de sus consolas web
+
+
+## Evidencias de la obtención de eventos registrados en los logs de la aplicación en Kibana
+![logsEnKibana](./src/5-evidenciaKibanaLogs1.JPG)  
+![logsEnKibana2](./src/6-EvidenciaKibanaLogs2.JPG)  
+
+
+## Análisis de rendimiento de los servidores con herramientas de CLI y/o Vector. ¿Alguno necesita más recursos o está sobredimensionado?
+![wptop](./src/7-wordpresserverprocess.jpg)
+![wpdu](./src/8-WPDiskUse.JPG)
+![ELKtop](./src/8-WPDiskUse.JPG)
+![ELKdu](./src/9-ELKTop.JPG)
+
+Podemos ver que los servidores estan sobredimencionados de momento, estando sobrados de capacidad de procesamiento, RAM y almacenamiento pero al no tener un marco de uso real no se puede decir cuales son los requirimientos productivos.
+Para el caso de prueba se podría reducir sobretodo en almacenamiento y memoria RAM
+
+## Propuestas para mejorar la escalabilidad y disponibilidad (HA)
+
+Se podría desplegar una infraestructura de alta disponiblidad mediante 3 nodos y un load balancer para ambos servidores.
+Tambien se puede simplificar el despliegue mediante el uso de Servicios cloud y contenedores
